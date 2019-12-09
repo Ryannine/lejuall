@@ -60,7 +60,7 @@
 import BScroll from "@better-scroll/core";
 import $ from "jquery";
 export default {
-  name: "article",
+  name: "article1",
   data() {
     return {};
   },

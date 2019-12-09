@@ -3,6 +3,7 @@
     <div @click="$router.go(-1)" class="staff-nav">
       <img :src="require('@/assets/imgs/icon/jiantou.png')" alt />
       <p>申请售后</p>
+
       <div class="nav-box"></div>
     </div>
     <div class="wrapper" ref="wrapper">

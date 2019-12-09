@@ -15,7 +15,6 @@ import {
   RadioButton,
   Input
 } from 'element-ui';
-
 Vue.use(RadioGroup).use(RadioButton).use(Input);
 // Dialog({
 //   message: '提示'

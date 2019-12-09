@@ -22,6 +22,37 @@ const routes = [{
 
   },
   {
+    path: '/order',
+    name: 'order',
+    component: () => import( /* webpackChunkName: "about" */ '../views/order/index.vue'),
+    redirect: '/order/all',
+    children: [{
+        path: 'all',
+        name: 'orderAll',
+        component: () => import( /* webpackChunkName: "about" */ '../views/order/all/index.vue'),
+
+      },
+      {
+        path: 'obligation',
+        name: 'orderObligation',
+        component: () => import( /* webpackChunkName: "about" */ '../views/order/obligation/index.vue'),
+
+      },
+      {
+        path: 'accountpaid',
+        name: 'orderAccountpaid',
+        component: () => import( /* webpackChunkName: "about" */ '../views/order/accountpaid/index.vue'),
+
+      },
+      {
+        path: 'done',
+        name: 'orderDone',
+        component: () => import( /* webpackChunkName: "about" */ '../views/order/done/index.vue'),
+
+      },
+    ]
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import( /* webpackChunkName: "about" */ '../views/about/index.vue')

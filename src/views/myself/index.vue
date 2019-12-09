@@ -32,30 +32,30 @@
             </div>
           </div>
           <div class="myself-myorder">
-            <div class="myorder-title">
+            <router-link tag="a" to="/order" class="myorder-title">
               <div>我的订单</div>
               <a href>
-                <img :src="require('@/assets/imgs/icon/jiantou.png')" alt />
+                <img :src="require('@/assets/imgs/icon/jiantou2.png')" alt />
               </a>
-            </div>
+            </router-link>
             <div class="myorder-line"></div>
             <div class="myorder-list">
-              <a href="#" class="myorder-box">
+              <router-link tag="a" to="/order/obligation" class="myorder-box">
                 <img :src="require('@/assets/imgs/icon/pay.png')" alt />
                 <p>待付款</p>
-              </a>
-              <a href="#" class="myorder-box">
+              </router-link>
+              <router-link tag="a" to="/order/accountpaid" class="myorder-box">
                 <img :src="require('@/assets/imgs/icon/Inbound.png')" alt />
                 <p>待收货</p>
-              </a>
-              <a href="#" class="myorder-box">
+              </router-link>
+              <router-link tag="a" to="/order/done" class="myorder-box">
                 <img :src="require('@/assets/imgs/icon/accomplish.png')" alt />
                 <p>已完成</p>
-              </a>
-              <a href="#" class="myorder-box">
+              </router-link>
+              <router-link tag="a" to="/staff" class="myorder-box">
                 <img :src="require('@/assets/imgs/icon/after-sale.png')" alt />
                 <p>售后</p>
-              </a>
+              </router-link>
             </div>
           </div>
           <div class="myself-info">
@@ -151,6 +151,9 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #f1ece7;
+  a {
+    color: #000;
+  }
   .wrapper {
     height: 667px;
     .content {
@@ -222,6 +225,7 @@ export default {
           font-size: 18px;
           margin-top: 20px;
           .myorder-title {
+            display: inline-block;
             width: 88%;
             margin: 0 auto;
             padding-top: 10px;
