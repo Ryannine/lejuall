@@ -93,10 +93,33 @@ const routes = [{
     component: () => import( /* webpackChunkName: "about" */ '../views/article/index.vue')
   },
   {
+    path: '/recomdetail',
+    name: 'recomdetail',
+    component: () => import( /* webpackChunkName: "about" */ '../views/recomdetail/index.vue')
+  },
+  {
+    path: '/articledetail',
+    name: 'articledetail',
+    component: () => import( /* webpackChunkName: "about" */ '../views/articledetail/index.vue')
+  },
+  {
     path: '/find',
     name: 'find',
-    component: () => import( /* webpackChunkName: "about" */ '../views/find/index.vue')
+    redirect: '/find/writings',
+    component: () => import( /* webpackChunkName: "about" */ '../views/find/index.vue'),
+    children: [{
+        path: 'writings',
+        name: 'findWritings',
+        component: () => import( /* webpackChunkName: "about" */ '../views/find/writings/index.vue'),
+      },
+      {
+        path: 'recommend',
+        name: 'findRecommend',
+        component: () => import( /* webpackChunkName: "about" */ '../views/find/recommend/index.vue'),
+      },
+    ]
   },
+
 
 ]
 
