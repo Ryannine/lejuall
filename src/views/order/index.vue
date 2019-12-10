@@ -2,7 +2,7 @@
   <div class="order-main">
     <div class="order-nav">
       <router-link tag="a" to="/myself">
-        <img :src="require('@/assets/imgs/icon/jiantou.png')" alt />
+        <img :src="require('@/assets/imgs/icon/jiantou.png')" alt>
       </router-link>
       <p>我的订单</p>
       <div class="nav-box"></div>
@@ -119,7 +119,6 @@ export default {
     padding-bottom: 10px;
     z-index: 999;
     .order-link {
-      width: 55px;
       height: 18px;
       margin: 0 auto;
       font-size: 18px;

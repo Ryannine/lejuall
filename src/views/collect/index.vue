@@ -128,13 +128,13 @@ export default {
     -ms-flex-align: center;
     align-items: center;
     color: #fff;
-    padding-left: 0.53333rem;
     background-color: #354e44;
     z-index: 999;
 
     img {
       width: 25px;
       height: 25px;
+      margin-left: 20px;
       transform: rotate(-180deg);
     }
     p {

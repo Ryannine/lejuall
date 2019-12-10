@@ -119,7 +119,7 @@ export default {
           height: 70px;
           background-color: #354e44;
           border-radius: 50%;
-
+          text-align: center;
           img {
             width: 40px;
             margin-top: 15px;

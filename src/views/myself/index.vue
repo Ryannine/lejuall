@@ -131,8 +131,10 @@ export default {
     touchstart(val) {
       if (val == 1) {
         $(".btn1").addClass("header-btn-act");
+        this.$router.push("/register");
       } else {
         $(".btn2").addClass("header-btn-act");
+        this.$router.push("/login");
       }
     },
     touchend(val) {
@@ -155,7 +157,7 @@ export default {
     color: #000;
   }
   .wrapper {
-    height: 667px;
+    height: calc(100% - 120px);
     .content {
       height: 700px;
       .myself-concent {
@@ -201,6 +203,7 @@ export default {
             justify-content: space-around;
             align-content: center;
             .header-btn {
+              text-align: center;
               color: #3d4c46;
               font-size: 18px;
               font-weight: bolder;
@@ -252,6 +255,7 @@ export default {
           .myorder-list {
             width: 100%;
             height: 80px;
+            text-align: center;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -281,6 +285,7 @@ export default {
           background-color: #ffffff;
 
           .info-list {
+            text-align: center;
             padding-top: 20px;
             padding-bottom: 20px;
             width: 100%;
@@ -305,7 +310,7 @@ export default {
               }
             }
             .info-box1 {
-              width: 50px;
+              width: 60px;
             }
           }
         }

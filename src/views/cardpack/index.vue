@@ -152,13 +152,14 @@ export default {
     -ms-flex-align: center;
     align-items: center;
     color: #fff;
-    padding-left: 0.53333rem;
+
     background-color: #354e44;
     z-index: 999;
 
     img {
       width: 25px;
       height: 25px;
+      margin-left: 20px;
       transform: rotate(-180deg);
     }
     p {
@@ -173,7 +174,6 @@ export default {
     height: 500px;
     .content {
       height: 550px;
-
       .package-list {
         margin-top: 55px;
         background-color: rgb(218, 215, 215);
@@ -228,6 +228,7 @@ export default {
             .package-right {
               width: 30%;
               height: 110px;
+              text-align: center;
               line-height: 110px;
               a {
                 text-decoration: none;

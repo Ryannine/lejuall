@@ -1,14 +1,28 @@
 <template>
   <div class="find-main">
-    <div class="find-nav">
-      <router-link class="find-link" tag="a" to="/find/writings">
-        <p>精选文章</p>
-        <div class="act"></div>
-      </router-link>
-      <router-link class="find-link" tag="a" to="/find/recommend">
-        <p>好物推荐</p>
-        <div class="act"></div>
-      </router-link>
+    <div class="header" v-if="$route.meta.tabShow">
+      <div class="nav-bar">
+        <router-link to="/find/writings">
+          精选文章
+          <span class="underline"></span>
+        </router-link>
+        <router-link to="/find/recommend">
+          好物推荐
+          <span class="underline"></span>
+        </router-link>
+      </div>
+    </div>
+    <div class="header header2" v-else>
+      <div class="nav-bar">
+        <router-link to="/find/writings">
+          精选文章
+          <span class="underline"></span>
+        </router-link>
+        <router-link to="/find/recommend">
+          好物推荐
+          <span class="underline"></span>
+        </router-link>
+      </div>
     </div>
     <transition
       mode="out-in"
@@ -36,43 +50,51 @@ export default {
 
 <style lang='scss' scoped>
 .find-main {
+  height: 100%;
+}
+.header.header2 {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.header {
   width: 100%;
-  height: 400px;
-  margin: 0 auto;
-  .find-nav {
-    width: 90%;
-    position: fixed;
-    top: 15px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 999;
-    .find-link {
-      transition: all 0.3s ease-in;
-      p {
-        font-size: 20px;
-        color: aliceblue;
-        font-weight: bold;
+  height: 103px;
+  background: #354e44;
+  text-align: center;
+  overflow: hidden;
+  .nav-bar {
+    margin-top: 45px;
+    a {
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #ffffff;
+      letter-spacing: 1.14px;
+      text-decoration: none;
+      margin-right: 20px;
+      position: relative;
+      display: inline-block;
+      &.router-link-exact-active {
+        .underline {
+          opacity: 1;
+        }
       }
-      .act {
-        transition: 0.3s linear;
-
-        width: 50px;
-        height: 5px;
-        margin-top: 10px;
-        margin-left: 30px;
-        border-radius: 15px;
-        background-color: #000;
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+      // 下划线
+      .underline {
+        position: absolute;
+        bottom: -10px;
+        right: 0px;
+        display: block;
+        background-color: white;
+        width: 32px;
+        height: 3px;
+        border-radius: 1.5px;
         opacity: 0;
-      }
-    }
-    .router-link-exact-active {
-      .act {
-        background-color: rgb(255, 255, 255);
-        opacity: 1;
+        transition: all 0.2s linear;
       }
     }
   }

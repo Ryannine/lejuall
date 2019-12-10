@@ -13,25 +13,25 @@
           <div class="about-bg1">
             <a href="#" class="about-line l1">
               <p>隐私声明</p>
-              <img :src="require('@/assets/imgs/icon/jiantou.png')" alt />
+              <img :src="require('@/assets/imgs/icon/jiantou2.png')" alt />
             </a>
           </div>
           <div class="about-bg2">
             <a href="#" class="about-line l2">
               <p>官方网站</p>
-              <img :src="require('@/assets/imgs/icon/jiantou.png')" alt />
+              <img :src="require('@/assets/imgs/icon/jiantou2.png')" alt />
             </a>
           </div>
           <div class="about-bg3">
             <a href="#" class="about-line l3">
               <p>版本更新</p>
-              <img :src="require('@/assets/imgs/icon/jiantou.png')" alt />
+              <img :src="require('@/assets/imgs/icon/jiantou2.png')" alt />
             </a>
           </div>
           <div class="about-bg4">
             <a href="#" class="about-line l4">
               <p>分享APP</p>
-              <img :src="require('@/assets/imgs/icon/jiantou.png')" alt />
+              <img :src="require('@/assets/imgs/icon/jiantou2.png')" alt />
             </a>
           </div>
         </div>
@@ -106,23 +106,44 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
-    padding-left: 20px;
-    padding-top: 15px;
+    width: 100%;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
     background-color: #354e44;
-
+    z-index: 999;
     img {
       width: 25px;
       height: 25px;
+      margin-left: 20px;
       transform: rotate(-180deg);
+    }
+    p {
+      width: 40px;
+    }
+    .nav-box {
+      width: 40px;
     }
   }
   .wrapper {
-    height: 643px;
+    height: 660px;
+    padding-top: 20px;
     .content {
+      padding-top: 30px;
       height: 700px;
       .about-header {
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+        align-items: center;
         height: 220px;
         img {
           padding-top: 40px;

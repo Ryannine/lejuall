@@ -115,11 +115,11 @@ export default {
     -ms-flex-align: center;
     align-items: center;
     color: #fff;
-    padding-left: 0.53333rem;
     background-color: #354e44;
     z-index: 999;
 
     img {
+      margin-left: 20px;
       width: 25px;
       height: 25px;
       transform: rotate(-180deg);
@@ -163,14 +163,15 @@ export default {
               .info-head {
                 width: 50px;
                 height: 50px;
+                text-align: center;
                 background-color: rgba(27, 26, 26, 0.8);
                 border-radius: 50%;
                 p {
                   width: 100%;
                   height: 100%;
+                  line-height: 50px;
                   color: #fff;
                   font-size: 30px;
-                  line-height: 50px;
                 }
               }
               .info-title {

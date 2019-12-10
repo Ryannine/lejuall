@@ -109,14 +109,14 @@ export default {
     color: #fff;
     background-color: #000;
     z-index: 999;
-    padding-left: 20px;
     .navimg1 {
       width: 25px;
       height: 25px;
+      margin-left: 20px;
       transform: rotate(-180deg);
     }
     .navimg2 {
-      padding-right: 40px;
+      padding-right: 20px;
       width: 25px;
       height: 25px;
     }
@@ -143,7 +143,7 @@ export default {
           height: 70px;
           background-color: #354e44;
           border-radius: 50%;
-
+          text-align: center;
           img {
             width: 40px;
             margin-top: 20px;

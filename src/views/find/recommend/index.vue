@@ -432,7 +432,7 @@ export default {
           border-radius: 15px;
           background-color: #fff;
           margin: 0 auto;
-          margin-top: 120px;
+          margin-top: 80px;
           img {
             padding-left: 15px;
             width: 90px;
